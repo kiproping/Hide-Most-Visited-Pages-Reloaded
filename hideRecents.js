@@ -2,6 +2,7 @@ chrome.runtime.onMessage.addListener(function(msg) {
   if ( msg === 'activate' ) {
     try {
       document.getElementById('most-visited').style.display = 'none';
+      document.getElementById('prm-pt').style.display = 'none';
     } catch ( e ) {}
   chrome.storage.sync.get(['cbAlsoHideLogo','cbAlsoHideSearchbar', 'cbAlsoHideNavbar'], function( obj ) {
     if ( obj.cbAlsoHideLogo && obj.cbAlsoHideLogo === true ) {
